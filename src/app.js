@@ -12,10 +12,33 @@ var chocolates = [
 ];
 
 //Progression 1: Add ___ chocolates of ____ color
-
+function addChocolates(chocolates,color, count){
+    if(count<=0){
+        return "Number cannot be zero/negative";
+    }
+    for(var i = 0; i<count;i++){
+        chocolates.unshift(color);
+    }
+}
 
 //Progression 2: Remove ___ chocolates from the top the dispenser
+function removeChocolates(chocolates, number) {
+let arr = [];
+let count = chocolates.length;
+if(count<number){
+    return "Insufficient chocolates in the dispenser";
+}
+else if(number <= 0){
+    return "Number cannot be zero/negative";
+}
+    for(var i =0; i<=number;i++){
+        arr.push(chocolates.shift());
+    }
 
+
+return arr;
+
+}
 
 //Progression 3: Dispense ___ chocolates
 
